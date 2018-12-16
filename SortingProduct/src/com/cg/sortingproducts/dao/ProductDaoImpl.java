@@ -23,9 +23,9 @@ public class ProductDaoImpl implements IProductDao{
 	@Override
 	public List<Product> priceRange(int maxRange, int minRange) {
 		// TODO Auto-generated method stub
-		Query query = em.createQuery("SELECT p FROM Product p WHERE p.productCost between startRange:maxRange and endRange:minRange");
-		query.setParameter("startRange", maxRange);
-		query.setParameter("endRange", minRange);
+		Query query = em.createQuery("SELECT p FROM Product p WHERE p.productCost between :startRange and :endRange");
+		query.setParameter("startRange", minRange);
+		query.setParameter("endRange", maxRange);
 		List<Product> prod = query.getResultList();
 		return prod;
 	}
