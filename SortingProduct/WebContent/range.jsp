@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="dosorting?startRange&?endRange">
+<form action="dosorting">
 <table>
 
 <tr>
